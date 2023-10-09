@@ -1,0 +1,92 @@
+{% extends "layouts/bulma_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href='{% static "app/css/register.css" %}'>
+{% endblock stylesheets %}
+
+
+{% block content %}
+
+<section class="hero is-fullheight has-background header-image"><!--<img src='{% static "app/images/background.png" %}'>-->
+    <div class="hero-head">
+        <div class="webname has-text-centered">
+          <!--<figure class="image is-256x256">
+            <img src='{% static "app/images/map.png" %}'>
+          </figure>-->
+          <p class="name has-text-centered is-uppercase is-family-sans-serif is-sized has-text-info">
+            CIST Map
+          </p>
+        </div>
+    </div>
+    <div class="hero-body has-text-centered">
+      <div class="card has-text-centered is-customized">
+        <header class="card-header">
+          <a href="index.html" class="card-header-icon is-color" aria-label="Back">
+            <span class="icon">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i>
+            </span>
+          </a>
+          <p class="card-header-title has-text-centered is-size">
+            Register
+          </p>
+          <a href="signin.html" class="card-header-icon is-color" aria-label="Signin">
+            <span class="icon">
+              <i class="fas fa-sign-in-alt" aria-hidden="true"></i>
+            </span>
+          </a>
+        </header>
+        <div class="card-content">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input class="input is-rounded is-primary" type="text" placeholder="Email">
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control has-icons-left">
+              <input class="input is-rounded is-primary" type="text" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control has-icons-left">
+              <input class="input is-rounded is-primary" type="text" placeholder="Re-enter password">
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </div>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox">
+            I agree to the <a href="#">terms and conditions</a>
+          </label>
+        </div>
+        <footer class="card-footer has-text-centered">
+          <a href="#" class="card-footer-item is-size">Register</a>
+        </footer>
+      </div>
+    </div>
+    <div class="hero-foot">
+          <div class="content has-text-centered">
+            <div class="column is-gapless">
+              <p>
+                <a href="https://cmc.com.vn/" target="_blank">
+                  <span>
+                    <h5 style="display: inline-block">Powered by</h5>
+                    <figure class="image is-24x24" style="display: inline-block;margin: 0;">
+                      <img src='{% static "app/images/logo3.png" %}'>
+                    </figure>
+                  </span>
+                </a>
+              </p>
+          </div>
+          </div>
+    </div>
+  </section>
+  
+
+{% endblock content %}

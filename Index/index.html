@@ -1,0 +1,77 @@
+{% extends "layouts/bulma_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href='{% static "app/css/index.css" %}'>
+{% endblock stylesheets %}
+
+
+{% block content %}
+
+<section class="hero is-fullheight has-background header-image"><!--<img src='{% static "app/images/background.png" %}'>-->
+    <div class="hero-head">
+        <div class="webname has-text-centered">
+          <!--<figure class="image is-256x256">
+            <img src='{% static "app/images/map.png" %}'>
+          </figure>-->
+          <p class="name has-text-centered is-uppercase is-family-sans-serif is-sized has-text-info">
+            CIST Map
+          </p>
+        </div>
+    </div>
+    <div class="hero-body">
+    </div>
+    <div class="hero-foot">
+        <div class="buttons is-centered are-med are-large">
+          <div class="columns is-8">
+            <p class="Sign in">
+                <button class="button is-info is-rounded">
+                    <a href="/pages/signin.html">Sign in</a>
+                </button>
+            </p>
+            <p>   </p>
+            <p class="Register">
+                <button class="button is-light is-info is-rounded">
+                    <a href="/pages/register.html">Register</a>
+                </button>
+            </p>
+          </div>
+        </div>
+          
+          <div class="buttons is-centered">
+            <button class="button is-customized" style="vertical-align: middle">
+              <span>
+                Take a tour
+              </span>
+            </button>    
+          </div>
+          <!--<div class="poweredby has-text-centered">
+            <a href="https://cmc.com.vn/" class="button">
+              <span>
+                <h3 style="display: inline-block">
+                    Powered by 
+                </h3>
+                <figure class="image is-24x24" style="display: inline-block">
+                  <img src='{% static "app/images/logo3.png" %}'>
+                </figure>
+              </span>
+            </a>
+          </div>-->
+          <div class="content has-text-centered">
+            <div class="column is-gapless">
+              <p>
+                <a href="https://cmc.com.vn/" target="_blank">
+                  <span>
+                    <h5 style="display: inline-block">Powered by</h5>
+                    <figure class="image is-24x24" style="display: inline-block;margin: 0;">
+                      <img src='{% static "app/img/logo3.png" %}'>
+                    </figure>
+                  </span>
+                </a>
+              </p>
+          </div>
+          </div>
+    </div>
+  </section>
+  
+
+{% endblock content %}

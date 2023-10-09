@@ -1,0 +1,110 @@
+{% extends "layouts/bulma_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<link rel="stylesheet" href='{% static "app/css/index.css" %}'>
+{% endblock stylesheets %}
+
+
+{% block content %}
+<section class="hero is-fullheight has-background">
+      <div class="card is-maincustomized has-text-centered is-horizontal-center has-shadow is-major">
+      <div class="card-content has-text-centered">
+        <div class="content is-customized has-text-centered">
+          <div class="card has-text-centered is-customized is-horizontal-center has-shadow is-minor" style="margin-bottom: auto; margin-top: 0px;">
+            <div class="card-content is-flex has-text-centered is-horizontal-center">
+              <div class="content has-text-centered" style="margin-bottom: 0px; margin-top: 0px;">
+                <figure class="image is-48x48" style="text-align: center">
+                  <img class="is-rounded is-horizontal-center" src='{% static "app/images/1.png" %}' alt="Placeholder image">
+                </figure>
+                <p class="title is-6 is-centered is-my-center" style="margin-bottom: 20px; margin-top: -15px;">
+                  Username
+                </p>
+                <div class="columns">
+                  <div class="column is-half">
+                    <a href="#signinpage">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-sign-out-alt fa-flip-horizontal"></i>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="column is-half">
+                    <a href="#settingpage">
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-user-cog"></i>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--<footer class="card-footer is-flex has-text-centered is-horizontal-center">-->
+           <!-- </footer>-->
+          </div>
+        </div>
+        <div class="content is-customized has-text-centered">
+          <div class="card has-text-centered is-customized has-shadow is-minor" style="margin-top: 10px;">
+              <div class="card-content has-text-centered">
+                <p style="margin-top: -10px;">
+                  Map filter
+                  <span class="icon">
+                    <i class="fas fa-filter"></i>
+                  </span>
+                </p>
+                <div class="select is-info is-rounded" style="margin-bottom: 0px;">
+                  <select>
+                    <option>Rainfall</option>
+                    <option>Temperature</option>
+                  </select>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="content is-customized has-text-centered">
+          <div class="card has-text-centered is-customized has-shadow is-minor" style="margin-bottom: 20px;">
+            <div class="card-content has-text-centered">
+              <a href="#dashboard" style="font-size: large;">Dashboard</a>
+            </div>
+          </div>
+        </div>
+        <div class="poweredby" style="margin-bottom: -20px;">
+            <div class="content has-text-centered">
+              <p>
+                <a href="https://cmc.com.vn/" target="_blank">
+                  <span>
+                    <h5 style="display: inline-block">Powered by</h5>
+                    <figure class="image is-24x24" style="display: inline-block;margin: 0;">
+                      <img src='{% static "app/images/logo3.png" %}'>
+                    </figure>
+                  </span>
+                </a>
+              </p>
+            </div>
+        </div>
+      </div>
+      </div>
+<!--Các nút zoom in zoom out-->      
+  <div class="zooming" style="position:absolute; right: 20px; bottom: 70px; text-align: center">
+    <button class="button is-rounded">
+      <span class="icon is-medium">
+        <i class="fas fa-plus"></i>
+      </span>
+    </button>
+  </div>
+  <div class="zooming" style="position:absolute; right: 20px; bottom: 20px; text-align: center">
+    <button class="button is-rounded">
+      <span class="icon is-medium">
+        <i class="fas fa-minus"></i>
+      </span>
+    </button>
+  </div>
+<!---->
+</section>
+<div class="maptype" style="position:absolute; right: 20px; top: 20px; text-align: center">
+  <button id="switchtheme" class="button is-rounded">
+    <span>
+      <i class="fas fa-lightbulb"></i>
+    </span>
+  </button>
+</div>
+<script src='{% static "app/js/scripts.js" %}'></script>
+{% endblock content %}

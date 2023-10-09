@@ -1,0 +1,90 @@
+.header-image {
+  background-image: url("/static/app/images/background2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.is-customized {
+  align-content: center;
+  border-radius: 20px;
+}
+
+.is-config {
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.is-maincustomized {
+  text-align: center;
+  align-content: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: max-content;
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.is-my-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.has-background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.has-shadow {
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px #a1a1a1;
+}
+
+.is-fix {
+  width: 15px;
+}
+
+body {
+  background-image: url("/static/app/images/DSC_3536.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+body.dark-theme {
+  background-image: url("/static/app/images/DSC_3530.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+.is-major {
+  background-color: #e2e2e2;
+  transition: all 0.5s ease-out;
+}
+
+.dark-theme .is-major {
+  background-color: #6e6e6e;
+  transition: all 0.5s ease-out;
+}
+.is-minor {
+  background-color: whitesmoke;
+  transition: all 0.5s ease-out;
+}
+.dark-theme .is-minor {
+  background-color: whitesmoke;
+  transition: all 0.5s ease-out;
+}

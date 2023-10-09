@@ -1,0 +1,29 @@
+#red{
+    color: red;
+}
+.header-image {
+    background-image: url("/static/app/images/background2.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.is-sized{
+    font-size: 5em;
+    font-weight: 500;
+    text-shadow: 2px 2px #0d0d0d;
+}   
+.has-text-centered {
+    justify-content: center;
+    align-items: center;
+}
+.is-customized {
+    border-radius: 20px;
+}
+.is-size{
+    font-size: 1.5em;
+    color: #1d99d5;
+}
+.is-color {
+    color: #1d99d5;
+}

@@ -1,0 +1,636 @@
+.header-image {
+  background-image: url("/static/app/images/background2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.is-customized {
+  align-content: center;
+  border-radius: 20px;
+  height: fit;
+}
+
+.is-config {
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.is-maincustomized {
+  text-align: center;
+  align-content: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: max-content;
+}
+
+.is-horizontal-center {
+  justify-content: center;
+}
+
+.is-my-center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.has-background {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.has-shadow {
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px #a1a1a1;
+}
+
+.is-fix {
+  width: 15px;
+}
+
+body {
+  background-image: url("/static/app/images/DSC_3536.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+body.dark-theme {
+  background-image: url("/static/app/images/DSC_3530.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  transition: all 0.5s ease-out;
+}
+
+.is-major {
+  background-color: #e2e2e2;
+  transition: all 0.5s ease-out;
+}
+
+.dark-theme .is-major {
+  background-color: #6e6e6e;
+  transition: all 0.5s ease-out;
+}
+.is-minor {
+  background-color: whitesmoke;
+  transition: all 0.5s ease-out;
+}
+.dark-theme .is-minor {
+  background-color: whitesmoke;
+  transition: all 0.5s ease-out;
+}
+
+.has-image-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+.is-resized {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.is-resizedr{
+  right: 0;
+  top: 50vh;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.needtoresize {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+/* Left side navigation */
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: whitesmoke; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
+  padding-top: 0px; /* Place content 20px from the top */
+  transition: 0.5s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  /*padding: 8px 8px 8px 32px;*/
+  margin-left: 20px;
+  margin-top: 150px;
+  text-decoration: none;
+  font-size: 25px;
+  color: gray;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #2c6fff;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 36px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+/*Popup*/
+
+.overlay {
+  position: fixed;
+  top: 10vh;
+  left: calc(50vh - 60px);
+  height: 80vh;
+  width: calc(140vh);
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  top: 5vh;
+  left: 10vh;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 2;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 30px;
+}
+.popup .close {
+  position: fixed;
+  top: -8vh;
+  right: 20vh;
+  transition: all 5s ease-in-out;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+.popup .close:hover {
+  color: #2c6fff;
+}
+
+.popup .content {
+  max-height: 80%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+/*Popup2*/
+
+.overlay2 {
+  position: fixed;
+  top: 10vh;
+  left: calc(50% - 25vh);
+  height: 80vh;
+  width: 50vh;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 2;
+}
+.overlay2:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup2 {
+  top: 5vh;
+  left: 5vh;
+  text-align: center;
+  background: whitesmoke;
+  border-radius: 20px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 2;
+}
+
+.popup2 h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 30px;
+}
+.popup2 .close2 {
+  position: fixed;
+  top: 11vh;
+  right: 77.5vh;
+  transition: all 5s ease-in-out;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+.popup2 .close2:hover {
+  color: #2c6fff;
+}
+
+.popup2 .content {
+  max-height: 80%;
+  overflow: auto;
+}
+
+/* Import image */
+
+::-webkit-input-placeholder {
+  opacity: 0.8;
+  color: #0d0d0d;
+}
+
+::-moz-placeholder {
+  opacity: 0.8;
+  color: #0d0d0d;
+}
+
+:-moz-placeholder {
+  opacity: 0.8;
+  color: #0d0d0d;
+}
+
+:-ms-input-placeholder {
+  opacity: 0.8;
+  color: white;
+}
+
+.preview {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 0px 2px #2d9afa;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.file-upload-wrapper {
+  position: relative;
+  z-index: 5;
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 25px auto;
+  border-radius: 0px;
+  border-bottom: 1px double #2d9afa;
+}
+
+.file-upload-native,
+.file-upload-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #0d0d0d;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+.file-upload-native:focus,
+.file-upload-text:focus {
+  outline: none;
+}
+
+.file-upload-text {
+  z-index: 10;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.6;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 1px;
+  text-overflow: ellipsis;
+  border: 0;
+  background-color: transparent;
+}
+
+.file-upload-native {
+  z-index: 15;
+  opacity: 0;
+}
+
+/* Tooltip */
+/*.hoverme {
+	display: inline;
+	position: relative;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 8px;
+}*/
+.hoverme:hover::after {
+	content: attr(data-tooltip);
+  width: max-content;
+  height: max-content;
+	padding: 12px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 20px;
+	background: #505050;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	top: 0px;
+  right: 70px;
+	font-size: 12px;
+	white-space: pre;
+	display: inline-block;
+  animation: showf 200ms linear;
+  z-index: 3;
+}
+
+@keyframes showf {
+	0% {
+		transform: scale(0.5);
+		opacity: 0.5;
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.hoverme + .hoverme:hover::after {
+	content: attr(data-tooltip);
+  width: max-content;
+  height: max-content;
+	padding: 12px;
+	font-family: sans-serif;
+	border-radius: 20px;
+	background: #505050;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+	right: 50%;
+	top: 0px;
+	font-size: 12px;
+	white-space: pre;
+	display: inline-block;
+	margin: 0 auto;
+	transform: translateX(-50%);
+  animation: show 500ms linear;
+  z-index: 3;
+}
+@keyframes show {
+	0% {
+		left: 50%;
+		transform: translateX(-50%) scale(0.5);
+		opacity: 0.2;
+	}
+	100% {
+		left: 50%;
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+/* Size popup */
+
+.hoverme2:hover::after {
+	content: attr(data-tooltip);
+  width: max-content;
+  height: max-content;
+	padding: 12px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	border-radius: 20px;
+	background: #505050;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+  top: 50px;
+  right: 16vh;
+	font-size: 12px;
+	white-space: pre;
+	display: inline-block;
+  animation: showf 200ms linear;
+  z-index: 3;
+}
+
+
+.hoverme2 + .hoverme2:hover::after {
+	content: attr(data-tooltip);
+  width: max-content;
+  height: max-content;
+	padding: 12px;
+	font-family: sans-serif;
+	border-radius: 20px;
+	background: #505050;
+	color: #fff;
+	position: absolute;
+	text-align: center;
+  top: 50px;
+  right: 16vh;
+	font-size: 12px;
+	white-space: pre;
+	display: inline-block;
+	margin: 0 auto;
+	transform: translateX(-50%);
+  animation: show 500ms linear;
+  z-index: 3;
+}
+
+/* The side navigation menu */
+.sidenavr {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: whitesmoke; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
+  padding-top: 0px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  text-align: right;
+}
+
+/* The navigation menu links */
+.sidenavr a {
+  margin-right: 20px;
+  margin-top: 50px;
+  text-decoration: none;
+  font-size: 25px;
+  color: gray;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenavr a:hover {
+  color: #2c6fff;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenavr .closebtnr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 36px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+nav {
+  opacity: 0.2;
+}
+nav:hover {
+  opacity: 1;
+}
+
+
+
+select {
+  font-family: 'FontAwesome', 'Second Font name' !important;
+  font-weight: 900;
+}
+.fa {
+  font-family: fontawesome !important;
+}
+
+
+/* Size */
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 7.5em;
+  /* Full-width */
+  height: 0.1em;
+  /* Specified height */
+  background: #2c6fff;
+  /* Grey background */
+  border: solid 0.3px #2c6fff;
+  /* Remove outline */
+  opacity: 0.6;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 20px
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 1.8em;
+  /* Set a specific slider handle width */
+  height: 1.8em;
+  /* Slider handle height */
+  background: none;
+  /* Green background */
+  cursor: grabbing;
+  /* Cursor on hover */
+  border-radius: 20px;
+  border: solid 5px #002366;
+  box-shadow:0 0 0 1px whitesmoke, inset 0 0 0 1px whitesmoke;
+}
+
+.slider::-moz-range-thumb {
+  width: 1em;
+  /* Set a specific slider handle width */
+  height: 1em;
+  /* Slider handle height */
+  background: #002366;
+  /* Green background */
+  cursor: grabbing;
+  /* Cursor on hover */
+  border-radius: 20px;
+  border: double 2px #bdbdbd;
+}
+
+.number {
+  height: 2.08em;
+  /*margin-left: 10px;*/
+  width: 75px;
+  border-radius: 20px;
+  border: solid 0.1px #2e2e2e;
+  padding: 5px;
+  font-size: 1.08em;
+  margin-right: 20px;
+}
+
+input{
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+ul {
+  margin: -5px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.units .number {
+  padding-right: 27px;
+  text-align: center;
+}
+.units span {
+  position: relative;
+  left: -50px;
+  top: 3px;
+  font-size: 1em; /* Optional, just styling it so it looks nicer */
+}
+.units .slider {
+  position: relative;
+  top: -2px;
+}

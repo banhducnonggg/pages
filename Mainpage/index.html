@@ -1,0 +1,222 @@
+{% extends "layouts/bulma_base.html" %}
+{% load static %}
+{% block stylesheets %}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href='{% static "app/css/index.css" %}'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+{% endblock stylesheets %}
+
+
+{% block content %}
+<section class="hero is-fullheight has-background">
+  <!--General-->
+
+  <!--Left sidenav-->
+  <div id="mySidenav" class="sidenav">
+    <!--Userview-->
+    <div class="user-view" style="margin-top: 30px;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!--User avatar-->
+      <figure class="image is-64x64" style="margin-left: 20px;">
+        <img class="is-rounded" src='{% static "app/images/1.png" %}'>
+      </figure>
+      <!--Username-->
+      <p class="title is-4" style="margin-left: 20px;margin-top: 10px;">
+        Username
+      </p>
+      <!--User email-->
+      <p class="title is-6" style="margin-left: 20px;margin-top: 10px;">
+        example@gmail.com
+      </p>
+    </div>
+    <!--Map pop up-->
+    <a href="#mappopup" class="title is-4">Map customize <i class="fas fa-map"></i></a>
+      <div id="mappopup" class="overlay">
+        <div class="popup">
+          <h2>Map customize</h2>
+          <a class="close" href="#">&times;</a>
+          <br>
+          <div class="content">
+            Put contents here
+          </div>
+        </div>
+      </div>
+    <!--Dashboard pop up-->
+    <a href="#dashboardpopup" class="title is-4">Dashboard <i class="fas fa-chart-line"></i></a>
+      <div id="dashboardpopup" class="overlay">
+        <div class="popup">
+          <h2>Dashboard</h2>
+          <a class="close" href="#">&times;</a>
+          <br>
+          <div class="content">
+            Put contents here
+          </div>
+        </div>
+      </div>
+    <!--Setting / Sign out-->
+    <div class="columns">
+      <div class="column is-half has-text-centered">
+        <a href="#signinpage">
+          <span class="icon is-small">
+            <i class="fas fa-sign-out-alt fa-flip-horizontal"></i>
+          </span>
+        </a>
+      </div>
+      <div class="column is-half">
+        <a href="#settingpopup">
+          <span class="icon is-small">
+            <i class="fas fa-cog"></i>
+          </span>
+        </a>
+        <div id="settingpopup" class="overlay">
+          <div class="popup">
+            <h2>Settings</h2>
+            <a class="close" href="#">&times;</a>
+            <br>
+            <div class="content">
+              <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                  <label class="label">Change Username</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <p class="control">
+                      <input class="input is-rounded" type="username" placeholder="Type new Username">
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="field is-horizontal" style="margin-top: 20px">
+                <div class="field-label is-normal">
+                  <label class="label">Confirm with password</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <p class="control">
+                      <input class="input is-rounded" type="password" placeholder="Type password to confirm change">
+                    </p>
+                  </div>
+                </div>
+                <button class="button is-rounded has-text-centered" style="margin-left: 50px"><b>Confirm change</b></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Use any element to open the sidenav -->
+  <span onclick="openNav()" class="icon has-text-info is-resized">
+    <button class="button is-rounded is-resized">
+      <i class="fas fa-bars"></i>
+    </button>
+  </span>
+  <!-- Pop up import brush -->
+              <div id="import" class="overlay2">
+                <div class="popup2">
+                  <h2>Import sticker</h2>
+                  <!--<a class="close" href="#">&times;</a>-->
+                  <a class="close2" href='#'>&#215</a>
+                  <br>
+                  <div class="content">
+                    <div class="preview img-wrapper"></div>
+                    <div class="file-upload-wrapper">
+                      <input type="file" name="file" class="file-upload-native" accept="image/*" />
+                      <input type="text" disabled placeholder="Upload image" class="file-upload-text" />
+                    </div>
+                    <button class="button is-rounded is-info" style="margin-top: 80px;">Save import</button>
+                  </div>
+                </div>
+              </div>
+  <!-- Draw on map section -->
+  <div class="breadcrumb is-right is-small has-arrow-separator" aria-label="breadcrumbs" style="position: absolute; top: 20px; right: 20px">
+    <ul >
+      <li>
+        <p class="control">
+          <div class="select is-rounded has-text-centered" style="height: fit-content; width: fit-content; margin-right: 10px;">
+            <select onchange="javascript:handleSelect(this)">
+              <option value="" selected>&#xf041</option>
+              <option value="">&#xf08d</option>
+              <option value="">&#xf02e</option>
+              <option style="font-size: 0.25pt; background-color: gray;" disabled>&nbsp;</option>
+              <option value="import">&#xf055</option>
+            </select>
+            <script type="text/javascript">
+              function handleSelect(elm)
+              {
+                if (elm.value == 'import') {
+                  window.location = "#"+elm.value;
+                }
+              }
+            </script>
+          </div>
+        </p>
+        <p class="control">
+          <button class="button is-small is-rounded" style="margin-right: 10px">
+            <i class="fas fa-bezier-curve"></i>
+          </button>
+        </p>
+        <p class="control">
+          <button class="button is-small is-rounded" style="margin-right: 10px">
+            <i class="fas fa-vector-square"></i>
+          </button>
+        </p>
+      </li>
+      <li>
+        <button class="button is-rounded is-small btn btn-md btn-warning jscolor {valueElement:'valueInput',styleElement:'rect'}" style="margin-right:10px; border-color: grey;" id='rect'>
+          <i class="fas fa-eye-dropper"></i>
+        </button>
+          <div class="units hoverme2" style="margin-right: -22px;" data-tooltip="Choose size between 1-100">
+            <input id="rangeInput" type="range" class="slider" min="1" max="100" oninput="amount.value=rangeInput.value" style="margin-right: 10px" />
+            <input id="amount" type="number" class="number" value="50" min="1" max="100" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==3) return false;" oninput="rangeInput.value=amount.value" />
+            <span>px</span>
+          </div>
+      </li>
+      <li>
+        <button class="button is-small is-rounded" style="margin-right: 10px">
+          <i class="fas fa-eraser"></i>
+        </button>
+        <button class="button is-rounded is-small">
+          <i class="fas fa-check"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+  
+  <a href="https://cist.cmc.com.vn/" target="_blank" class="needtoresize">
+      <figure class="image is-48x48" style="margin-bottom: 10px; margin-left: 20px;">
+        <img src='{% static "app/images/test.png" %}'>
+      </figure>
+  </a>
+
+<!--Các nút zoom in zoom out-->      
+  <div class="zooming" style="position:absolute; right: 20px; bottom: 70px; text-align: center">
+    <button class="button is-rounded">
+      <span class="icon is-medium">
+        <i class="fas fa-plus"></i>
+      </span>
+    </button>
+  </div>
+  <div class="zooming" style="position:absolute; right: 20px; bottom: 20px; text-align: center">
+    <button class="button is-rounded">
+      <span class="icon is-medium">
+        <i class="fas fa-minus"></i>
+      </span>
+    </button>
+  </div>
+</section>
+<!--Theme-->
+<div class="maptype hoverme" style="position:absolute; right: 20px; top: 50vh; text-align: center" data-tooltip="Change theme">
+  <button id="switchtheme" class="button is-rounded">
+    <span>
+      <i class="fas fa-lightbulb"></i>
+    </span>
+  </button>
+</div>
+
+<script src='{% static "app/js/scripts.js" %}'></script>
+
+{% endblock content %}
